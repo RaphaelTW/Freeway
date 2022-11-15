@@ -5,7 +5,7 @@ let imgCarrinho1;
 let imgCarrinho2;
 let imgCarrinho3;
 
-function preload(){
+function preload() {
     imgEstrada = loadImage("img/estrada.png");
     imgPersonagem = loadImage("img/ator-1.png");
     imgCarrinho1 = loadImage("img/carro-1.png");

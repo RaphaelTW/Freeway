@@ -9,4 +9,5 @@ function draw() {
     movimentoCarrinho();
     movimentoPersonagem();
     voltaInicio();
+    colisaoPersonagem();
 }
