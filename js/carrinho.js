@@ -9,20 +9,33 @@ function mostraCarrinho1(){
     }
 }
 
-function movimentoCarrinho() {
-    xCarrinhos[0] -= velocidadeCarrinhos[0];
-    xCarrinhos[1] -= velocidadeCarrinhos[1];
-    xCarrinhos[2] -= velocidadeCarrinhos[2];
+function movimentoCarrinho(){
+    for (let i = 0; i < imgCarrinhos.length; i = i +1){
+        xCarrinhos[i] -= velocidadeCarrinhos[i];
+    }
 }
 
-function voltaInicio() {
-    if (xCarrinhos[0] < -50){
-        xCarrinhos[0] = 600;
-    }
-    if (xCarrinhos[1] < -50){
-        xCarrinhos[1] = 600;
-    }
-    if (xCarrinhos[2] < -50){
-        xCarrinhos[2] = 600;
+function voltaInicio(){
+    for (let i = 0; i < imgCarrinhos.length; i = i +1){
+        if (passouTela(xCarrinhos[i])){
+            xCarrinhos[i] = 600;
+        }
     }
 }
+
+function passouTela(xCarrinhos){
+    return xCarrinhos < -50;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
