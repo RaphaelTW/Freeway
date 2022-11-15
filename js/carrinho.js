@@ -1,34 +1,28 @@
 //Código dos Carrinhos
-
-//Carrinho 1
-let xCarrinho1 = 600;
-let yCarrinho1 = 40;
-let velocidadeCarrinho1 = 2;
-
-//Carrinho 2
-let xCarrinho2 = 600;
-let yCarrinho2 = 96;
-let velocidadeCarrinho2 = 2.5;
-
-//Carrinho 2
-let xCarrinho3 = 600;
-let yCarrinho3 = 150;
-let velocidadeCarrinho3 = 4;
+let xCarrinhos = [600, 600, 600];
+let yCarrinhos = [40, 96, 150];
+let velocidadeCarrinhos = [2, 2.5, 4];
 
 function mostraCarrinho1(){
-    image(imgCarrinho1, xCarrinho1, yCarrinho1, 50, 40);
-    image(imgCarrinho2, xCarrinho2, yCarrinho2, 50, 40);
-    image(imgCarrinho3, xCarrinho3, yCarrinho3, 50, 40);
+    for (let i = 0; i < imgCarrinhos.length; i = i + 1){
+        image(imgCarrinhos[i], xCarrinhos[i], yCarrinhos[i], 50, 40);
+    }
 }
 
 function movimentoCarrinho() {
-    xCarrinho1 -= velocidadeCarrinho1;
-    xCarrinho2 -= velocidadeCarrinho2;
-    xCarrinho3 -= velocidadeCarrinho3;
+    xCarrinhos[0] -= velocidadeCarrinhos[0];
+    xCarrinhos[1] -= velocidadeCarrinhos[1];
+    xCarrinhos[2] -= velocidadeCarrinhos[2];
 }
 
 function voltaInicio() {
-    if (xCarrinho < -30){
-        xCarrinho1 = 600;
+    if (xCarrinhos[0] < -50){
+        xCarrinhos[0] = 600;
+    }
+    if (xCarrinhos[1] < -50){
+        xCarrinhos[1] = 600;
+    }
+    if (xCarrinhos[2] < -50){
+        xCarrinhos[2] = 600;
     }
 }
