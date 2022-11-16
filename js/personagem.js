@@ -1,7 +1,8 @@
 //Código do Personagem
-let xPersonagem = 100;
+let xPersonagem = 85;
 let yPersonagem = 366;
 let colisao = false;
+let pontos = 0;
 
 //Código que exibe o Personagem
 function mostraPersonagem() {
@@ -31,4 +32,18 @@ function colisaoPersonagem() {
 
 function colidiu() {
     yPersonagem = 366;
+}
+
+function incluirPontos() {
+    textAlign(CENTER);
+    textSize(30);
+    fill(color(226, 252, 0));
+    text(pontos, width / 5, 28);
+}
+
+function marcaPontos() {
+    if (yPersonagem < 15) {
+        pontos += 1;
+        colidiu();
+    }
 }

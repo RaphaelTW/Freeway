@@ -10,4 +10,6 @@ function draw() {
     movimentoPersonagem();
     voltaInicio();
     colisaoPersonagem();
+    incluirPontos();
+    marcaPontos();
 }
