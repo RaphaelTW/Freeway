@@ -27,6 +27,7 @@ function colisaoPersonagem() {
         colisao = collideRectCircle(xCarrinhos[i], yCarrinhos[i], comprimentoCarrinho, alturaCarrinho, xPersonagem, yPersonagem, 15);
         if (colisao) {
             colidiu();
+            somColisao.play();
             if (pontosMaiorQueZero()) {
                 pontos -= 1;
             }
@@ -48,6 +49,7 @@ function incluirPontos() {
 function marcaPontos() {
     if (yPersonagem < 15) {
         pontos += 1;
+        somPontos.play();
         colidiu();
     }
 }
